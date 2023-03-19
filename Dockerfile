@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y wget libglib2.0-0 libnss3 libx11-xcb1 libxkbcommon0 libxcb-dri3-0 libdrm2 libgbm1 libasound2
 
 # Fiddler Everywhereのダウンロード
-RUN wget https://telerik-fiddler.s3.amazonaws.com/fiddler-everywhere/FiddlerAnywhere.AppImage -O /usr/local/bin/Fiddler.AppImage
+RUN wget https://downloads.getfiddler.com/linux/fiddler-everywhere-4.1.2.AppImage -O /usr/local/bin/Fiddler.AppImage
 
 # 実行権限の付与
 RUN chmod +x /usr/local/bin/Fiddler.AppImage
