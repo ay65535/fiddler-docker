@@ -1,0 +1,5 @@
+static function OnBeforeRequest(oSession: Session) {
+    if (oSession.HostnameIs("rubygems.org") && oSession.HTTPMethodIs("GET")) {
+        oSession.fullUrl = oSession.fullUrl.Replace("http://", "https://");
+    }
+}
